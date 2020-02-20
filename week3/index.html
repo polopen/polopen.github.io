@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+<body>
+
+	<div id="original_img_container">
+	<img src="media/my_snack.png" id="original_img" />
+	</div>
+
+	<div id="topbag">
+		<div id="shadow">
+			RUFFLES
+		</div>
+		<div id="ruffles">
+			RUFFLES
+		</div>
+		<div id="subtitle">
+			RUFFLES HAVE RRRIDGES
+		</div>
+		<div id="brand">
+			BRAND
+		</div>
+
+	</div>
+
+	<div id="medbag">
+		<div id="cheese">
+	</div>
+	</div>
+
+	<div id="bottombag">
+		<div id="cheddar">
+			CHEDDAR
+		</div>
+		<div id="sourcream">
+			& SOUR CREAM
+		</div>
+		<div id="flavored">
+			FLAVORED
+		</div>
+		<div id="potatochips">
+			POTATO CHIPS
+		</div>
+	</div>
+
+	<div id="draggable" class="ui-widget-content">
+	  	<img src="media/chip.png" class="title_img" height="163" width="253">
+	</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$( function() {
+		$( "#draggable" ).draggable();
+		} );
+	</script>
+</body>
+</html>
