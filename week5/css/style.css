@@ -1,0 +1,99 @@
+.left_container{
+	position:fixed;
+	top: 5%;
+/*	left:4%;*/
+/*	width:40%;
+	height: 97%;*/
+	text-align: left;
+}
+.right_container{
+	position:fixed;
+	top:3%;
+	right:1%;
+/*	width:20%;
+	height: 97%;*/
+	text-align: right;
+	z-index:-1;
+}
+.godzilla_img{
+	width: 100%;
+	height: 100%;
+}
+.kingkong_img{
+	width: 80%;
+	height: 80%;
+}
+.firstcaptch{
+	position: fixed;
+	padding: 10px;
+	line-height: 50%;
+	top:50%;
+	left: 15%;
+	font-family: 'Comic Sans MS';
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	border-style: solid;
+  	z-index: 10;
+}
+
+.secondcaptch{
+	display: none;
+	position: fixed;
+	padding: 10px;
+	line-height: 50%;
+	top: 67%;
+	right: 20%;
+	font-family: 'Comic Sans MS';
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	border-style: solid;
+  	z-index: 10;
+}
+
+.hidden2{
+	display: none;
+	width: auto;
+	height: 70%;
+	position: fixed;
+	top:20%;
+	left: 35%;
+	z-index: 5;
+}
+
+.explosion_img{
+	height: 100%;
+}
+
+.awww_img{
+	display: none;
+	position: fixed;
+	bottom: 30%;
+	left: 40%;
+	height: 80%;
+}
+
+@media only screen and (max-width: 1350px) {
+  .secondcaptch {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .hidden2 {
+    display: inherit;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .awww_img {
+    display: inherit;
+  }
+}
+@media only screen and (max-width: 720px) {
+	.left_container{
+		width:70%;
+	}
+	.right_container{
+		width:70%;
+	}
+}

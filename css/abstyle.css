@@ -3,8 +3,10 @@ body{
 }
 
 #title{
-	text-align: center;
-	/*position: relative;*/
+/*	text-align: center;*/
+	position: relative;
+	top: 20%;
+	left: 5%;
 /*	transform: translate(5%, -3%);*/
 	font-family: 'Rock Salt', sans-serif;
 	font-size: 70px;
@@ -20,15 +22,35 @@ body{
 }*/
 
 #description{
-	position: justify;
-	float: center;
-	height: 300px;
+	background-color: #9900cc;
+	border-radius: 50px;
+	color: white;
+	position: relative;
+	top: 20%;
+	left: 50%;
+	/*float: center;*/
+	height: 220px;
 	width: 600px;
+	padding: 20px;
 	font-size: 15px;
 	font-family:'Lato';
 }
 
-#dasme{
-	/*left: 20%;*/
-	text-align: center;
+.dasme{
+	position: absolute;
+	left: 13%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+/*  margin-left: %; //centers the image*/
+  height: 50%;
+  width: auto;
+}
+
+.container{
+	position: relative;
 }
