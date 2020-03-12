@@ -2,12 +2,43 @@ body{
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
+.landing_animation_container{
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 0;
+	animation-name: background_animation;
+	animation-duration: 1.5s;
+	animation-fill-mode:forwards;
+	animation-delay: 3s;
+}
+
+@keyframes background_animation {
+	0%   {top: 0%;}
+	100% {top: -100%;}
+}
+
+.main_title{
+	color: black;
+	font-size: 24px;
+	font-family: 'Raleway', sans-serif;
+	position: absolute;
+	letter-spacing: 3px;
+	word-spacing: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 #title{
 	text-align: center;
 	position: static;
 	top: 80%;
 	left: 50%;
-	/*transform: translate(-50%, -50%);*/
+/*	transform: translate(-50%, -50%);*/
 	font-family: 'Rock Salt', sans-serif;
 	font-size: 100px;
 	color: white;
@@ -20,11 +51,21 @@ body{
 
 }
 
+/* If the screen size is 600px wide or less, set the font-size of title to 
+@media screen and (max-width: 700px) {
+  #title {
+    font-size: 80%;
+}*/
+
 .container {
-	position: absolute;
-	top: 10%;
-	left:13%;
+/*	position: absolute;*/
+/*	top: 10%;*/
+/*	left:13%;*/
 	overflow: hidden;
+}
+
+.navbar{
+	float: center;
 }
 #links {
 	text-align: center;
@@ -37,17 +78,18 @@ body{
 
 #home{
 	float: left;
-	width: 500px;
+	display: inline;
+
 }
 
 #about{
-	float: left;
-	width: 100px;
+	float: center;
+	display: inline;
 }
 
 #work {
-	float:right;
-	width: 500px;
+	float: right;
+	display: inline;
 }
 
 .work_list{
@@ -61,12 +103,4 @@ body{
 .navlink {
 	color:white;
 	text-decoration: none;
-}
-
-.navlink{hover
-	color: black;
-}
-
-.navlink{visited
-
 }
