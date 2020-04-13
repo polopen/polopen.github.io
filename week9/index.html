@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="picture">
+	<img src="media/poem.png" class="img" height="400px">
+</div>
+<div id= "poem">
+<p>
+Who am I to write a poem? <br>
+Am I a poet, perhaps? <br>
+A <span id="student">student</span>? An author? <br>
+Shall I compare thee to <span id="summer">a summer&#39;s day</span>? <br>
+High school <span id="highschool">English</span> class was never my <br>
+forte. <br>
+…anyway, <br>
+<span id="denial">Denial</span> is not a river in Egypt. <br>
+Far from, actually. <br>
+Or maybe that's just <br>
+the Niall. <br>
+A member of One Direction. <br>
+North, South, East, West <br>
+Those are in fact, <br>
+four <br>
+directions. <br>
+Where was I going with this? <br>
+To school? To <span id="work">work</span>? Egypt? <br>
+...well, it&#39;s not like I can leave home <br>
+anyway. <br>
+Deuces. <br>
+</p>
+</div>
+
+<button onclick="myFunction()">
+SHUFFLE
+</button>
+
+<script>
+
+//this function will be executed whenever the shuffle button is clicked because of 'onclick' DOM inside the button tag. 
+function myFunction(){
+  //this Math.random will generate random number between 0 and 1
+  var randomNumber = Math.random();
+  var chosenWord = "";
+  var chosenWord2 = "";
+  var chosenWord3 = "";
+  var chosenWord4 = "";
+  var chosenWord5 = "";
+  var bgColor = "";
+
+  //using if statement, check if the randomNumber is larger than 0.5 or not.
+  if (randomNumber < 0.20){
+    // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
+    chosenWord = "football playing king in space? With a mustache";
+    chosenWord2 = "Panda Express Orange Chicken";
+    chosenWord3 = "Band";
+    chosenWord4 = "Denver";
+    chosenWord5 ="my OBGYN";
+    bgColor = "pink";
+  }
+    else if ((randomNumber >= 0.20) && (randomNumber <.40)){
+    // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
+    chosenWord = "clown";
+    chosenWord2 = "yo mama";
+    chosenWord3 = "Trig";
+    chosenWord4 = "Denny's";
+    chosenWord5 ="Church";
+    bgColor = "skyblue";
+  }
+    else if ((randomNumber >= 0.40) && (randomNumber <.60)){
+    // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
+    chosenWord = "scuba diver";
+    chosenWord2 = "a blossoming garden";
+    chosenWord3 = "Spin";
+    chosenWord4 = "My dentist";
+    chosenWord5 ="an Applebee's bathroom";
+    bgColor = "limegreen";
+  }
+    else if ((randomNumber >= 0.60) && (randomNumber <.80)){
+    // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
+    chosenWord = "placenta";
+    chosenWord2 = "a slice of much needed garlic bread";
+    chosenWord3 = "Theatrical Improv";
+    chosenWord4 = "Dunkin Donuts";
+    chosenWord5 ="a music festival";
+    bgColor = "gold";
+  }
+  else{
+    // if randomNumber is not larger than 0.5 assign "Death" to chosenWord and "darkgray" to bg color
+    chosenWord = "student";
+    chosenWord2 = "a summer's day";
+    chosenWord3 = "English";
+    chosenWord4 = "Denial";
+    chosenWord5 ="work";
+    bgColor = "white";
+  }
+
+  //get the elements from html page which are needed to be changed
+  var student = document.getElementById("student");
+  var summer = document.getElementById("summer");
+  var highschool = document.getElementById("highschool");
+  var denial = document.getElementById("denial");
+  var work = document.getElementById("work");
+
+  var poem = document.getElementById("poem");
+
+  //assign the variables to each element so that we can see the changes from webpage.
+  student.innerHTML = chosenWord;
+  summer.innerHTML = chosenWord2;
+  highschool.innerHTML = chosenWord3;
+  denial.innerHTML = chosenWord4;
+  work.innerHTML = chosenWord5;
+  poem.style.backgroundColor = bgColor;
+
+  //to check newly assigned randomNumber from the console, let's add this line
+  console.log(randomNumber);
+}
+</script>
+</body>
+</html>
+
+

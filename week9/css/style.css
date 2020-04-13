@@ -1,0 +1,13 @@
+#picture {
+position: absolute;
+z-index: -1;
+}
+
+#poem {
+	width: 20%;
+	position: relative;
+	padding: 30px;
+	margin: 40px;
+	top: 10%;
+	left: 27%;
+}
