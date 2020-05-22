@@ -1,5 +1,13 @@
 body{
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
+	margin:0px;
+}
+
+#bg_container{
+	background: url("../img/bg290.jpg") 0 0;
+  	background-size: cover;
+  	z-index: -2;
+  	position: absolute;
 }
 
 .landing_animation_container{
@@ -9,13 +17,13 @@ body{
 	position: fixed;
 	top:0;
 	left:0;
-	z-index: 0;
+	z-index: 5;
 	animation-name: background_animation;
 	animation-duration: 1.5s;
 	animation-fill-mode:forwards;
 	animation-delay: 3s;
 }
-
+																																		/*STARTING ANIMATION*/
 @keyframes background_animation {
 	0%   {top: 0%;}
 	100% {top: -100%;}
@@ -32,40 +40,149 @@ body{
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
-#title{
-	text-align: center;
-	position: static;
-	top: 80%;
-	left: 50%;
-/*	transform: translate(-50%, -50%);*/
-	font-family: 'Rock Salt', sans-serif;
-	font-size: 100px;
-	color: white;
-	transition: -webkit-text-stroke-color 2s, color 2s;
-}
-#title:hover{
-	color:transparent;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: white;
-
+																																				/*NAME*/
+#jessica{
+/*	background-color: red;*/
+	position: fixed;
+	top: 25%;
+	left: 15%;
+	width: 700px;
+	transition: 3s;
+	transition-delay: 4s;
+	z-index: 4;
 }
 
+#jessica_img{
+	width:100%;
+}
+
+#jessica:hover{
+	transition: 1s;
+	top: 15%;
+}
+
+#garcia{
+/*	background-color: green;*/
+	position: fixed;
+	top: 48%;
+	left: 35%;
+	/*left: 15%;*/
+	width: 700px;
+	transition: 2s;
+	transition-delay: 4s;
+	z-index: 4;
+}
+
+#garcia_img{
+	width:100%;
+}
+
+#garcia:hover{
+	transition: 1s;
+	top: 65%;
+}
+
+/* floating object to each project*/
+																																						/*FACE*/
+#face{
+	position: fixed;
+	width: 800px;
+	top: -20%;
+	left: -15%;
+	z-index: -2;
+
+}
+
+#face_img{
+	width: 100%;
+}
+
+#ruffles{
+	position: fixed;
+	right: 0%;
+	transform: rotate(15deg);
+	width:400px;
+}
+
+#week3{
+	width: 100%;
+}
+
+#ruflink a: hover{
+	animation:tilt 1s;
+}
+@keyframes tilt {
+	0%{
+	transform: rotate (0deg);
+	}
+	100%{
+	transform: rotate (15deg);	
+	}
+}
+
+#sparks{
+	position: fixed;
+	left: 30%;
+	width:400px;
+	z-index: -1;
+}
+
+#week2{
+	width: 100%;
+}
+
+#facetracking{
+	position: fixed;
+	top: -5%;
+	right: 23%;
+	/*transform: rotate(15deg);*/
+	width: 350px;
+	z-index: -2;
+}
+
+#week11{
+	width: 100%;
+}
+
+#kingkong{
+	position: fixed;
+	bottom: 0%;
+	right: -3%;
+	width: 300px;
+}
+
+#week5{
+	width: 100%;
+}
 /* If the screen size is 600px wide or less, set the font-size of title to 
 @media screen and (max-width: 700px) {
   #title {
     font-size: 80%;
 }*/
-
-.container {
-/*	position: absolute;*/
-/*	top: 10%;*/
-/*	left:13%;*/
-	overflow: hidden;
+																																					/*DRAGGABLES*/
+#draggable{
+	position: fixed;
+	top: 10%;
+	left: 3%;
 }
 
+#draggable2{
+	position: fixed;
+	bottom: -1%;
+	right:0%;
+	width: 500px;
+}
+.container {
+	overflow: hidden;
+}
+																																						/*LINKS*/
 .navbar{
-	float: center;
+	position: fixed;
+	top: 40%;
+	left: 35%;
+/*	background-color: red;*/
+	width: 500px;
+	z-index: -1;
 }
 #links {
 	text-align: center;
@@ -74,33 +191,116 @@ body{
 	font-weight: bolder;
 	font-size: 40px;
 	word-spacing: 30px;
-}
-
-#home{
-	float: left;
-	display: inline;
-
+	text-shadow: 3px 3px #000000;
 }
 
 #about{
-	float: center;
+	float: left;
 	display: inline;
 }
 
-#work {
-	float: right;
-	display: inline;
+/* Dropup container DIV */
+.dropup {
+    position: fixed;
+    display: inline-block;
+    bottom: 30%;
+    right: 24%;
 }
 
-.work_list{
-	list-style-type: none;
-  	margin: 0;
-  	padding: 0;
-  	font-size: 28px;
-  	color: white;
+/* Dropup button */
+.dropbtn {
+text-align: center;
+    padding:30px;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 40px;
+    word-spacing: 30px;
+    text-shadow: 3px 3px #000000;
+    background-color:rgba(0, 0, 0, 0);
+    border: none;
+}
+
+/* Dropup menu (Hidden by Default) */
+.dropup-menu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    z-index: 3;
+    width:450px;
+}
+
+/* Links inside the dropup menu */
+.dropup-menu a {
+    padding:10px;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    word-spacing: 5px;
+    text-decoration: none;
+    display: block;
+    z-index: 3000;
+}
+
+/* Change bg-color of dropup links on hover */
+.dropup-menu a:hover {
+    text-shadow: 3px 3px #000000;
+}
+
+.show {
+    display: block;
 }
 
 .navlink {
 	color:white;
 	text-decoration: none;
+}
+																																										/*RESPONSIVE DESIGN*/
+@media (min-width: 700px) {
+	#bg_container{
+		background: url("../img/bg2.jpg");
+	}
+
+}
+
+@media (max-width: 768px) and (min-width: 500px){
+	#jessica{
+		top:35%;
+		left:0%;
+		width:400px;
+	}
+	#garcia{
+		top:50%;
+		left: 15%;
+		width:400px;
+	}
+	#face{
+		top:10%;
+		left:-30%;
+		width: 500px;
+	}
+
+	.navbar{
+		left:10%;
+	}
+
+	.dropup-menu a {
+		color: black;
+		line-height: 10px;
+	}
+
+	.dropup-menu a:hover {
+    text-shadow: 3px 3px #FFFFFF;
+	}
+
+
+	#draggable{
+		top:15%;
+		left:0%;
+		width: 200px;
+	}
+
 }

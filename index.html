@@ -1,53 +1,133 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- webfonts -->
-	<link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-<!-- javascript link for accordion menu  -->
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="js/jquery.collapse.js"></script>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- webfonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <!-- javascript link for accordion menu  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/jquery.collapse.js"></script>
     <script src="js/jquery.collapse_storage.js"></script>
     <script src="js/jquery.collapse_cookie_storage.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+      $( "#draggable" ).draggable();
+      $( "#draggable2" ).draggable();
+      } );
+    </script>
+  </head>
+  <body>
+  	<!-- nahee : I create this div 'bg_container' to switch the background image to rotated one when user use mobile device / please look css part of this id too! -->
+  	<!-- nahee : also cleaning up indentation of this doc a little bit because the problem of hidden 'works' menu comes from the mixed order of tags. this cleaned state will make you see the things better! -->
+  	<div id="bg_container">
+  		&nbsp;
+  	</div>
+    <div class="container">
+	    <!-- <div class="landing_animation_container">
+	      <p class="main_title"> Jessica Garcia </p> -->
+	    </div>
+	    <div id = "name">
+	      <div id = "jessica">
+	        <img src="./media/Jessica.png" id= "jessica_img" />
+	      </div>
+	      <div id="garcia">
+	        <img src="./media/Garcia.png" id="garcia_img"/>
+	      </div>
+	    </div>
+	    <!--nahee : gave all floating objects the class 'object' so that I can control their positions in javascript when user use mobile device(width<=600px). Please look javascript part of this too below -->
+	    <div id= "face" class="">
+	      <img src="./media/selfportwhite.png" id="face_img"/>
+	    </div>
+	    <div id="ruffles" class="object">
+	      <a href="./week3/index.html">
+	        <img src="./media/week3slide.png" id="week3"/>
+	      </a>
+	    </div>
+	    <div id="sparks" class="object">
+	    	<a href="./week2/index.html">
+	    		<img src="./media/week2slide.png" id="week2"/>
+	    	</a>
+	    </div>
+	    <div id="facetracking" class="object">
+		    <a href="https://editor.p5js.org/polopen/full/yDUHgZxnr">
+		    	<img src="./media/facetrack.png" id="week11"/>
+		    </a>
+	    </div>
+	    <div id="kingkong" class="object">
+		    <a href="./week5/index.html">
+		    	<img src="./media/kingkong.png" id="week5"/>
+		    </a>
+	    </div>
+	    <div id="draggable" class="ui-widget-content">
+	    	<img src="media/chip.png" class="chip" height="163" width="253">
+	    </div>
+	    <div id="draggable2" class="ui-widget-content">
+	    	<img src="./media/cityline.png" class="city" width= "600">
+	    </div>
+	    <div class="navbar">
+	    <div id="links">
+	    <div id="about">
+	    <a class="navlink" href="./about/index.html">about</a>
+	    </div>
+	    </div>
+	    </div>
+    
+	    <div class="dropup">
+	      <button class="dropbtn">
+	        <a class="navlink">
+	          works
+	        </a>
+	      </button>
+	      <div class="dropup-menu">
+		      <a href="./week2/index.html">gradient scrubber</a>
+		      <a href="./week3/index.html">all that and a bag of</a>
+		      <a href="./week5/index.html">forbidden love</a>
+		      <a href="./week9/index.html">a poem</a>
+		      <a href="./week10/index.html">carousel</a>
+	      </div>
+	    </div>
+    </div>
+    <script src="./stuff.js" type="text/javascript"></script>
+    <script>
+      let dropup = document.querySelector(".dropup");
+      let dropupMenu = document.querySelector(".dropup-menu");
+      dropup.onclick = function() {
+          dropupMenu.classList.toggle("show");
+      }
 
-</head>
-<body>
- 	<div class="container">
- 			<div class="landing_animation_container">
-		<p class="main_title"> Jessica Garcia </p>
-	</div>
- 			<div id="title">
-			Jessica Garcia
-		</div>
-		<div class="navbar">
-			<div id="links">
-			<div id= "home">
- 			<a class="navlink" href="index.html">home</a>
- 		</div>
+      let bgDiv = document.getElementById("bg_container");
+      bgDiv.style.width = window.innerWidth + "px";
+      bgDiv.style.height = window.innerHeight +"px";
 
- 			<div id="about">
- 			<a class="navlink" href="./about/index.html">about</a>
- 		</div>
+      let floatingObjects = document.getElementsByClassName("object");
 
- 			<div id="work">
- 				<div id="default-example" data-collapse="accordion">
- 			<a class="navlink">work</a>
- 				<div>
-		  		<ul class="work_list">
-			    	<br><a class="navlink" href="./week2/index.html">week 2</a></br>
-			    	<br><a class="navlink" href="./week3/index.html">week 3</a></br>
-			    	<br><a class="navlink" href="./week5/index.html">week 5</a></br>
-			    	<br><a class="navlink" href="./week9/index.html">week 9</a></br>
-			    	<br><a class="navlink" href="./week10/index.html">week 9</a></br>
-			  	</ul>
-				</div>
-				</div>
- 			</div>	
- 		</div>
+      if (window.innerWidth<=600){
+      	  /* option 1 - randomly arranging the objects in top 25% and left 80% area*/
+      	  /* also try the option 2 below by commenting this option1 part and uncommenting the option2 part! */
+	      // for (var i = 0; i < floatingObjects.length; i++) {
+	      // 	floatingObjects[i].style.top = Math.random()*25 + "%";
+	      // 	floatingObjects[i].style.left = Math.random()*80 + "%";
+	      // 	floatingObjects[i].style.width = "35%";
+	      // }
 
- 	<script src="./stuff.js" type="text/javascript"></script>
-</body>
+	      /* option 2 - control x,y coordinate of each object*/
+	      var objectXCoord = [61,0,35,75];
+	      var objectYCoord = [2,1,8,30];
+
+	      for (var i = 0; i < floatingObjects.length; i++) {
+	      	floatingObjects[i].style.top = objectYCoord[i] +"%";
+	      	floatingObjects[i].style.left = objectXCoord[i] +"%";
+	      	floatingObjects[i].style.width = "50%";
+	      }
+      }
+
+
+
+    </script>
+  </body>
 </html>

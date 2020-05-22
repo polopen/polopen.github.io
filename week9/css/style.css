@@ -1,13 +1,61 @@
 #picture {
-position: absolute;
+position: fixed;
+top: 10%;
+left: 10%;
 z-index: -1;
+width:400px;
+}
+
+#img{
+	width:100%;
 }
 
 #poem {
-	width: 20%;
-	position: relative;
+	width: 450px;
+	position: fixed;
 	padding: 30px;
 	margin: 40px;
-	top: 10%;
-	left: 27%;
+	top: 2%;
+	left: 35%;
+}
+
+#button{
+	position: fixed;
+	top: 50%;
+	left:25%;
+}
+
+#home{
+	position: fixed;
+	top:0%;
+	left: 0%;
+	padding:10px;
+	font-family: 'Raleway';
+	font-weight: bolder;
+	font-size: 25px;
+	word-spacing: 30px;
+}
+
+.navlink {
+	color:black;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) and (min-width: 500px){
+#picture{
+	top:0%;
+	left: 0%;
+}
+#poem{
+	top: 30%;
+	left: 0%;
+	overflow: scroll;
+}
+
+#button{
+	top: 40%;
+	left: 50%;
+}
+}
+
 }

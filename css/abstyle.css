@@ -4,53 +4,98 @@ body{
 
 #title{
 /*	text-align: center;*/
-	position: relative;
-	top: 20%;
+	position: fixed;
 	left: 5%;
 /*	transform: translate(5%, -3%);*/
 	font-family: 'Rock Salt', sans-serif;
 	font-size: 70px;
 	color: #5BC0EB;
-	line-height: .4;
-	text-shadow: 4px 4px #000000
-/*	transition: -webkit-text-stroke-color 2s, color 2s;*/
+	line-height: 10px;
+	text-shadow: 4px 4px #000000;
+	transition: 1s;
 }
-/*#title:hover{
+#title:hover{
 	color:transparent;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
-}*/
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: white;
+	text-shadow: none;
+	transition: 1s;
+}
 
 #description{
-	background-color: #9900cc;
+	background-color: rgba(104, 0, 204, 0.4);
 	border-radius: 50px;
 	color: white;
-	position: relative;
-	top: 20%;
-	left: 50%;
-	/*float: center;*/
-	height: 220px;
-	width: 600px;
+	position: fixed;
+	top: 25%;
+	left: 43%;
+	height: 275px;
+	width: 500px;
 	padding: 20px;
 	font-size: 15px;
 	font-family:'Lato';
 }
 
 .dasme{
-	position: absolute;
-	left: 13%;
-    overflow: hidden;
-    border-radius: 50%;
+	position: fixed;
+	top: 30%;
+	left: 5%;
+    width: 500px;
+
 }
 
 .profile-pic {
-  display: inline;
-  margin: 0 auto;
-/*  margin-left: %; //centers the image*/
-  height: 50%;
-  width: auto;
+  width: 100%;
+  border-radius: 50%;
+  transition:.5s;
+}
+
+.profile-pic:hover{
+	transition: .5s;
+	border-radius: 0%;
+}
+
+.navlink {
+	color:white;
+	text-decoration: none;
+}
+
+#home{
+	position: fixed;
+	top:0%;
+	left: 0%;
+	padding:10px;
+	font-family: 'Raleway';
+	font-weight: bolder;
+	font-size: 25px;
+	word-spacing: 30px;
+	text-shadow: 3px 3px #000000;
 }
 
 .container{
 	position: relative;
+}
+
+@media (max-width: 768px) and (min-width: 500px){
+#title{
+	font-size: 60px;
+	}
+
+.dasme{
+	top: 25%;
+	left: 15%;
+	width: 350px;
+	}
+.profile-pic{
+	width: 100%;
+	height: 100%;
+}
+
+#description{
+	top: 67%;
+	left: 1%;
+	width: 90%;
+	height: 180px;
+	font-size: 12px;
+}
 }

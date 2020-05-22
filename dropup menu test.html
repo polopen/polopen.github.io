@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<!-- <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style>
+/* Dropup container DIV */
+.dropup {
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+}
+
+/* Dropup button */
+.dropbtn {
+text-align: center;
+    padding:30px;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 40px;
+    word-spacing: 30px;
+    background-color:rgba(0, 0, 0, 0);
+    border: none;
+}
+
+/* Dropup menu (Hidden by Default) */
+.dropup-menu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+    width:500px;
+}
+
+/* Links inside the dropup menu */
+.dropup-menu a {
+    color: #000;
+    padding:30px;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 40px;
+    line-height: 35px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change bg-color of dropup links on hover */
+.dropup-menu a:hover {
+    color: red;
+}
+
+.show {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<h1>Create a Clickable Dropup Menu</h1>
+
+<div class="dropup">
+    <button class="dropbtn">works
+    </button>
+    <div class="dropup-menu">
+        <a href="./week2/index.html">week 2</a>
+        <a href="./week3/index.html">week 3</a>
+        <a href="./week5/index.html">week 5</a>
+        <a href="./week9/index.html">week 9</a>
+        <a href="./week10/index.html">week 10</a>
+    </div>
+</div>
+
+<script>
+let dropup = document.querySelector(".dropup");
+let dropupMenu = document.querySelector(".dropup-menu");
+
+dropup.onclick = function() {
+    dropupMenu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
